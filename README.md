@@ -119,25 +119,37 @@ time required for 16 inputs/outputs without program
 
 110 microseconden
 
+
+
 time required for 64 inputs/outputs without program
 
 437 microseconden
 
+
+
 average time per instruction
 
 1.5 microseconden
+
+
 
 For full use of the program space with 64 inputs/outputs, 50 milliseconds should be more than sufficient.
 
 437 microseconden + (16000 instructies * 1.5 microseconden)  = 24437 microseconden.
 
 
+
+
 Inputs are read at the beginning of the program
+
 
 Outputs are calculated during the runtime of the program but only written to the outputs at the end of the program.
 
+
 Program line processing without brackets is done from left to right.
 
+
 Program line processing with brackets, first all logic within the brackets from left to right until all brackets are processed and then the entire line from left to right.
+
 
 Automatic restart of the program if saved in FLASH and prog/run switch set to run.
