@@ -23,20 +23,29 @@ can be expanded to:
 64 internal markers
 
 64 internal counters
+
 	counter_up input
+ 
 	counter_down input
+ 
 	counter_reset input
 
 	counter_up output 		1 if count value reached
+ 
 	counter_down output 		1 if count value 0
 	
 64 internal timers
+
 	timer input
+ 
 	timer_reset input
+ 
 	timer_output 			1 if set time reached
+ 
 	adjustable between 0.1 second and 99:59:59:90
 
 TMR56 to TMR63 continuous timers
+
 	deliver square wave of set time if input 1
 
 Due to the limited dimensions of the screen, programming can only be done using Arduino logic
