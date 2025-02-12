@@ -45,10 +45,13 @@ Due to the limited dimensions of the screen, programming can only be done using 
 || 	OR
 ^	XOR
 !	NOT
+
 (	
 )
+
 /\	RISING EDGE
 \/	FALLING EDGE
+
 =	
 SET
 RST
