@@ -42,27 +42,39 @@ TMR56 to TMR63 continuous timers
 Due to the limited dimensions of the screen, programming can only be done using Arduino logic
 
 &&	AND
+
 || 	OR
+
 ^	XOR
+
 !	NOT
 
 (	
+
 )
 
 /\	RISING EDGE
+
 \/	FALLING EDGE
 
 =	
+
 SET
+
 RST
 
 Cycle time adjustable between 10 milliseconds and 100 milliseconds (hardware timer interrupt)
 
 To keep the Timer seconds the same as real seconds set to:
+
 	10 milliseconden
+ 
 	20 milliseconden
+ 
 	25 milliseconden
+ 
 	50 milliseconden
+ 
 	100 milliseconden
 
 Program can be saved in the FLASH memory of the STM32F407.
@@ -81,23 +93,29 @@ with maximum usage of bytes in each line, the maximum number of lines is 800.
 bytes per instruction
 
 1 byte
+
 &&  ||  ^  ! =  SET  RST  (  ) /\  \/
 
 2 bytes
+
 INxx  OUTxx  Mxx  TMRxx  CTRUxx CTRDxx  TMR_Rxx  CTR_Rxx
 
 3 bytes
+
 PWMxx %% 	PWM number percent output
 
 Cycle time depends on the number of selected inputs/outputs and program length
 
 time required for 16 inputs/outputs without program
+
 110 microseconden
 
 time required for 64 inputs/outputs without program
+
 437 microseconden
 
 average time per instruction
+
 1.5 microseconden
 
 For full use of the program space with 64 inputs/outputs, 50 milliseconds should be more than sufficient.
