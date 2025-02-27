@@ -281,77 +281,77 @@ bool haakjes_bool;
 
 char print_char[20];
 
-int commando_coord_int[35][2] = {{5, 130},
-                                 {109, 130},
-                                 {161, 130},
-                                 {213, 130},
-                                 {265, 130},
-                                 {317, 130},
-                                 {5, 170},
-                                 {57, 170},
-                                 {109, 170},
-                                 {161, 170},
-                                 {213, 170},
-                                 {5, 210},
-                                 {57, 210},
-                                 {109, 210},
-                                 {213, 210},
-                                 {265, 210},
-                                 {317, 210},
-                                 {5, 250},
-                                 {57, 250},
-                                 {5, 290},
-                                 {57, 290},
-                                 {161, 290},
-                                 {213, 290},
-                                 {265, 290},
-                                 {317, 290},
-                                 {5, 90},
-                                 {57, 90},
-                                 {109, 90},
-                                 {161, 90},
-                                 {430, 90},
-                                 {430, 130},
-                                 {430, 170},
-                                 {430, 210},
-                                 {430, 250},
-                                 {430, 290}};
+const int commando_coord_int[35][2] = {{5, 130},
+                                       {109, 130},
+                                       {161, 130},
+                                       {213, 130},
+                                       {265, 130},
+                                       {317, 130},
+                                       {5, 170},
+                                       {57, 170},
+                                       {109, 170},
+                                       {161, 170},
+                                       {213, 170},
+                                       {5, 210},
+                                       {57, 210},
+                                       {109, 210},
+                                       {213, 210},
+                                       {265, 210},
+                                       {317, 210},
+                                       {5, 250},
+                                       {57, 250},
+                                       {5, 290},
+                                       {57, 290},
+                                       {161, 290},
+                                       {213, 290},
+                                       {265, 290},
+                                       {317, 290},
+                                       {5, 90},
+                                       {57, 90},
+                                       {109, 90},
+                                       {161, 90},
+                                       {430, 90},
+                                       {430, 130},
+                                       {430, 170},
+                                       {430, 210},
+                                       {430, 250},
+                                       {430, 290}};
 
-int key_naar_int[20] = {10, 1, 4, 7, 11, 12, 2, 5, 8, 0, 13, 3, 6, 9, 14, 15, 16, 17, 18, 19};
-int keuzemenu_hor_int[8] = {70, 100, 130, 160, 190, 220, 250, 280};
+const int key_naar_int[20] = {10, 1, 4, 7, 11, 12, 2, 5, 8, 0, 13, 3, 6, 9, 14, 15, 16, 17, 18, 19};
+const int keuzemenu_hor_int[8] = {70, 100, 130, 160, 190, 220, 250, 280};
 
-int pwm_hor_int[8][2] = {{35, 75},
-                         {35, 100},
-                         {35, 125},
-                         {35, 150},
-                         {35, 200},
-                         {35, 225},
-                         {35, 250},
-                         {35, 275}};
+const int pwm_hor_int[8][2] = {{35, 75},
+                               {35, 100},
+                               {35, 125},
+                               {35, 150},
+                               {35, 200},
+                               {35, 225},
+                               {35, 250},
+                               {35, 275}};
 
-int tmr_ctr_coor_int[2][4] = {{0, 50, 0, 50},
-                              {429, 479, 0, 50}};
+const int tmr_ctr_coor_int[2][4] = {{0, 50, 0, 50},
+                                    {429, 479, 0, 50}};
 
-int tmr_ctr_hor_int[16][2] = {{35, 75},
-                              {35, 100},
-                              {35, 125},
-                              {35, 150},
-                              {35, 175},
-                              {35, 200},
-                              {35, 225},
-                              {35, 250},
-                              {250, 75},
-                              {250, 100},
-                              {250, 125},
-                              {250, 150},
-                              {250, 175},
-                              {250, 200},
-                              {250, 225},
-                              {250, 250}};
+const int tmr_ctr_hor_int[16][2] = {{35, 75},
+                                    {35, 100},
+                                    {35, 125},
+                                    {35, 150},
+                                    {35, 175},
+                                    {35, 200},
+                                    {35, 225},
+                                    {35, 250},
+                                    {250, 75},
+                                    {250, 100},
+                                    {250, 125},
+                                    {250, 150},
+                                    {250, 175},
+                                    {250, 200},
+                                    {250, 225},
+                                    {250, 250}};
 
-int in_out_hor_int[3][2] = {{35, 125},
-                            {35, 150},
-                            {35, 200}};
+const int in_out_hor_int[3][2] = {{35, 125},
+                                  {35, 150},
+                                  {35, 200}};
 
 int cyclustijd_int = 100000;  // tijd in microseconden;
 int timer_int;
@@ -423,7 +423,7 @@ int edit_lijn_positie_int;
 int edit_lijn_positie_vorig_int;
 int lengte_int;
 int pixel_positie_int[MAX_INST + 1];
-int programma_array_int[MAX_LINE + 1][MAX_INST + 1];
+int programma_array_int[MAX_LINE + 1][MAX_INST + 2];
 int open_teller_int;
 int close_teller_int;
 int buffer_teller_int;
@@ -438,41 +438,41 @@ float y_factor_float;
 
 long start_micros_long;
 
-String commando_string[35] = {{"IN"},
-                              {"OUT"},
-                              {"M"},
-                              {"TMR"},
-                              {"CTRU"},
-                              {"CTRD"},
-                              {"&&"},
-                              {"||"},
-                              {"^"},
-                              {"("},
-                              {")"},
-                              {"/\\"},
-                              {"\\/"},
-                              {"!"},
-                              {" = "},
-                              {" SET "},
-                              {" RST "},
-                              {"TMR_R"},
-                              {"CTR_R"},
-                              {"PWM"},
-                              {"PWM_F"},
-                              {"AI ="},
-                              {"AI >"},
-                              {"AI <"},
-                              {"AI ><"},
-                              {"<<<"},
-                              {">>>"},
-                              {"INS"},
-                              {"DEL"},
-                              {"NEW"},
-                              {"TOP"},
-                              {"+++"},
-                              {"---"},
-                              {"INS"},
-                              {"DEL"}};
+const String commando_string[35] = {{"IN"},
+                                    {"OUT"},
+                                    {"M"},
+                                    {"TMR"},
+                                    {"CTRU"},
+                                    {"CTRD"},
+                                    {"&&"},
+                                    {"||"},
+                                    {"^"},
+                                    {"("},
+                                    {")"},
+                                    {"/\\"},
+                                    {"\\/"},
+                                    {"!"},
+                                    {" = "},
+                                    {" SET "},
+                                    {" RST "},
+                                    {"TMR_R"},
+                                    {"CTR_R"},
+                                    {"PWM"},
+                                    {"PWM_F"},
+                                    {"AI ="},
+                                    {"AI >"},
+                                    {"AI <"},
+                                    {"AI ><"},
+                                    {"<<<"},
+                                    {">>>"},
+                                    {"INS"},
+                                    {"DEL"},
+                                    {"NEW"},
+                                    {"TOP"},
+                                    {"+++"},
+                                    {"---"},
+                                    {"INS"},
+                                    {"DEL"}};
 
 TFT_eSPI tft = TFT_eSPI(); 
 SPIClass SPI_1(TFT_TOUCH_MOSI, TFT_TOUCH_MISO, TFT_TOUCH_SCLK);
@@ -858,9 +858,9 @@ void loop(){
             }
             else{
               max_bool = false;
+              bereken_programma_lijn_positie_int();
+              edit_lijn_positie_int = programma_lijn_positie_int;
             }
-            bereken_programma_lijn_positie_int();
-            edit_lijn_positie_int = programma_lijn_positie_int;
           }
           /*
           Edit programma
@@ -1412,7 +1412,7 @@ void loop(){
           */
           if((commando_plus_int == INS_C) && (programma_array_int[programma_lijn_int][0] < AI_E)){
             veranderd_bool = true;
-            if(programma_lijn_positie_int < MAX_INST){
+            if(programma_lijn_positie_int < MAX_INST - 1){
               if(((programma_array_int[programma_lijn_int][edit_lijn_positie_int] == AND) || (programma_array_int[programma_lijn_int][edit_lijn_positie_int] == OR) || (programma_array_int[programma_lijn_int][edit_lijn_positie_int] == XOR) || (programma_array_int[programma_lijn_int][edit_lijn_positie_int] == NOT)
                 || (programma_array_int[programma_lijn_int][edit_lijn_positie_int] == OPEN) || (programma_array_int[programma_lijn_int][edit_lijn_positie_int] == CLOSE) || (programma_array_int[programma_lijn_int][edit_lijn_positie_int] == IN) || (programma_array_int[programma_lijn_int][edit_lijn_positie_int] == OUT)
                 || (programma_array_int[programma_lijn_int][edit_lijn_positie_int] == SET) || (programma_array_int[programma_lijn_int][edit_lijn_positie_int] == RST) || (programma_array_int[programma_lijn_int][edit_lijn_positie_int] == EQUALS) || (programma_array_int[programma_lijn_int][edit_lijn_positie_int] == MERKER)
@@ -1446,63 +1446,48 @@ void loop(){
           */
           if(commando_plus_int == DEL_C){
             veranderd_bool = true;
+            int laatste_inst_int = 0;
+            int inst_lengte_int = 0;
+            for(int x = 0; x < MAX_INST + 2; x ++){
+              if(programma_array_int[programma_lijn_int][x] != 0xff){
+                laatste_inst_int = x;
+              }
+            }
+            laatste_inst_int ++;
             commando_int = programma_array_int[programma_lijn_int][edit_lijn_positie_int];
-            if(edit_lijn_positie_int > 0){
-              commando_min_1_int = programma_array_int[programma_lijn_int][edit_lijn_positie_int - 1];
-            }
-            if(edit_lijn_positie_int > 1){
-              commando_min_2_int = programma_array_int[programma_lijn_int][edit_lijn_positie_int - 2];
-            }
             if((commando_int == IN) || (commando_int == OUT) || (commando_int == MERKER) || (commando_int == TMR) || (commando_int == CTRU)
-                || (commando_int == CTRD) || (commando_int == TMR_R) || (commando_int == CTR_R)){
-              for(int x = edit_lijn_positie_int; x < MAX_INST -2; x++){
+                || (commando_int == CTRD) || (commando_int == TMR_R) || (commando_int == CTR_R) || (commando_int == PWM)){
+              for(int x = edit_lijn_positie_int; x < MAX_INST; x++){
                 programma_array_int[programma_lijn_int][x] = programma_array_int[programma_lijn_int][x + 2];
               }
-              programma_array_int[programma_lijn_int][MAX_INST] = 0xff;
-              programma_array_int[programma_lijn_int][MAX_INST - 1] = 0xff;
-              toon_programma_lijn();
+              inst_lengte_int = 2;
             }
             if((commando_int == AND) || (commando_int == OR) || (commando_int == XOR) || (commando_int == RISE) || (commando_int == FALL) || (commando_int == NOT) || (commando_int == OPEN) || (commando_int == CLOSE)
                 || (commando_int == SET) || (commando_int == RST) || (commando_int == EQUALS)){
-              for(int x = edit_lijn_positie_int; x < MAX_INST - 1; x++){
+              for(int x = edit_lijn_positie_int; x < MAX_INST; x++){
                 programma_array_int[programma_lijn_int][x] = programma_array_int[programma_lijn_int][x + 1];
               }
-              programma_array_int[programma_lijn_int][(MAX_INST)] = 0xff;
-              toon_programma_lijn();
+              inst_lengte_int = 1;
             }
-            if((commando_int == AI_E) || (commando_int == AI_G) || (commando_int == AI_L)){
-              for(int x = edit_lijn_positie_int; x < MAX_INST -3; x++){
+            if((commando_int == AI_E) || (commando_int == AI_G) || (commando_int == AI_L) || (commando_int == PWM_F)){
+              for(int x = edit_lijn_positie_int; x < MAX_INST - 1; x++){
                 programma_array_int[programma_lijn_int][x] = programma_array_int[programma_lijn_int][x + 3];
               }
-              programma_array_int[programma_lijn_int][MAX_INST] = 0xff;
-              programma_array_int[programma_lijn_int][MAX_INST - 1] = 0xff;
-              programma_array_int[programma_lijn_int][MAX_INST - 2] = 0xff;
-              toon_programma_lijn();
+              inst_lengte_int = 3;
             }
             if(commando_int == AI_G_L){
-              for(int x = edit_lijn_positie_int; x < MAX_INST -4; x++){
+              for(int x = edit_lijn_positie_int; x < MAX_INST - 2; x++){
                 programma_array_int[programma_lijn_int][x] = programma_array_int[programma_lijn_int][x + 4];
               }
-              programma_array_int[programma_lijn_int][MAX_INST] = 0xff;
-              programma_array_int[programma_lijn_int][MAX_INST - 1] = 0xff;
-              programma_array_int[programma_lijn_int][MAX_INST - 2] = 0xff;
-              programma_array_int[programma_lijn_int][MAX_INST - 3] = 0xff;
-              toon_programma_lijn();
+              inst_lengte_int = 4;
             }
-            if(commando_int == PWM){
-              programma_array_int[programma_lijn_int][edit_lijn_positie_int] = 0xff;
-              programma_array_int[programma_lijn_int][edit_lijn_positie_int + 1] = 0xff;
-              programma_array_int[programma_lijn_int][edit_lijn_positie_int + 2] = 0xff;
-              toon_programma_lijn();
+            for(int x = (laatste_inst_int - inst_lengte_int); x < MAX_INST + 2; x ++){
+              programma_array_int[programma_lijn_int][x] = 0xff;
             }
-            if(commando_int == PWM_F){
-              programma_array_int[programma_lijn_int][edit_lijn_positie_int] = 0xff;
-              programma_array_int[programma_lijn_int][edit_lijn_positie_int + 1] = 0xff;
-              programma_array_int[programma_lijn_int][edit_lijn_positie_int + 2] = 0xff;
-              toon_programma_lijn();
-            }
+            toon_programma_lijn();
           }
           bereken_programma_lijn_positie_int();
+          max_bool = false;
           delay(500);
         }
         /*************
@@ -1780,7 +1765,6 @@ void loop(){
                 }
               }
               no_key_detect();
-              //key_int = 99;
             }
           }
           /*
@@ -2063,7 +2047,6 @@ void loop(){
             keuze_bool = true;
           }
           no_key_detect();
-          //key_int = 99;
         }
       }
     }
@@ -3939,7 +3922,7 @@ void calibrate_test(){
 void programma_array_reset(){
   for(int x = 0; x < MAX_LINE + 1; x ++){
     open_array_int[x] = 0;
-    for(int y = 0; y < MAX_INST + 1; y++){
+    for(int y = 0; y < MAX_INST + 2; y++){
       programma_array_int[x][y] = 0xff;
     }
   }
