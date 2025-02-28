@@ -4825,12 +4825,12 @@ void schrijf_programma(){
     eeprom_adres_int = eeprom_adres_int + sizeof(byte);
     print_adres();
   }
-  for(x = 0; x < MAX_LINE + 1; x ++){
+  for(x = 0; x < MAX_LINE; x ++){
     if(programma_array_int[x][0] == 0xff){
       EEPROM.write(eeprom_adres_int, 0xff);
       break;
     }
-    for(y = 0; y < MAX_INST + 1; y ++){
+    for(y = 0; y < MAX_INST; y ++){
       print_adres();
       EEPROM.write(eeprom_adres_int, programma_array_int[x][y]);
       eeprom_adres_int = eeprom_adres_int + sizeof(byte);
@@ -4947,14 +4947,17 @@ void lees_programma(){
     ctr_instelling_int[x] = bytes_to_int();
   }
   beschikbaar_flash_geheugen_int = 16384 - eeprom_adres_int;
-  for(x = 0; x < MAX_LINE + 1; x ++){
+  for(x = 0; x < MAX_LINE; x ++){
     if(gedaan_bool){
       programma_lijn_max_int = x - 1;
       break;
     }
-    for(y = 0; y < MAX_INST + 1; y ++){
+    for(y = 0; y < MAX_INST; y ++){
       print_adres();
       programma_array_int[x][y] = EEPROM.read(eeprom_adres_int);
+      if(programma_array_int[x][y] == OPEN){
+        open_array_int[x] ++;
+      }
       eeprom_adres_int = eeprom_adres_int + sizeof(byte);
       if(programma_array_int[x][0] == 0xff){
         gedaan_bool = true;
