@@ -2,7 +2,9 @@
 
 Update 25-02-2025 : now also with 4 analog inputs
 
-Update 27-02-2025 : new ino and bin file fixed error in DEL line instruction
+Update 27-02-2025 : new ino and bin file fixed error in DEL in-line edit
+
+Update 28-02-2025 : new .ino and .bin file fixed error flash reading brackets 
 
 Features :
 
